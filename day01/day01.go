@@ -40,4 +40,15 @@ func main() {
 	fmt.Println("Part One: ", result)
 
 	// part Two
+	result = 0
+	for _, numb1 := range list1 {
+		similarity := 0
+		for _, numb2 := range list2 {
+			if numb1 == numb2 {
+				similarity++
+			}
+		}
+		result += similarity * numb1
+	}
+	fmt.Println("Part Two: ", result)
 }
